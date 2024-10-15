@@ -18,13 +18,35 @@
             pulaLinha()
         }
 
-        let pesoEdu = 86
-        let alturaEdu = 1.72
+        mostra('Número de pontos do meu time no Brasileirão')
 
-        let incEdu = pesoEdu/(alturaEdu*alturaEdu)
+        let nomeTime = prompt('Qual o nome do time?')
+        let vitorias = prompt('Quantas vitórias o seu time obtve durante o campeonato?')
+        let empates = prompt('Quantos empates o seu time teve?')
+        let perdas = prompt ('Quantas vezes seu time perdeu?')
 
-        mostra(` O IMC de Eduardo é ${incEdu}`)//template string
-        mostra(' O IMC de Eduardo é $ ' + incEdu)//concatenação normal
+        let pontuacao = parseInt(vitorias * 3) + parseInt(empates * 1)
+
+        mostra(`O ${nomeTime} obteve um total de ${pontuacao}pontos`)
+
+        if(pontuacao >80){
+            mostra('Parabens, seu time passou para a séria A do Brasileirão')
+        
+        } else if(pontuacao < 20){
+            mostra('infelizmente seu time foi rebaixado')
+        
+        } else {
+            mostra('Seu time continua na série B')
+        }
+
+        function calcularIMC(peso, altura){
+          return imc = peso/(altura*altura)
+        }
+
+        let imcEdu = calcularIMC(86, 1.72)
+        mostra('O IMC de Edu calculado é ' + incEdu)
+
+
     </script>
     
 </body>
