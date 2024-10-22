@@ -18,34 +18,25 @@
             pulaLinha()
         }
 
-        mostra('Número de pontos do meu time no Brasileirão')
-
-        let nomeTime = prompt('Qual o nome do time?')
-        let vitorias = prompt('Quantas vitórias o seu time obtve durante o campeonato?')
-        let empates = prompt('Quantos empates o seu time teve?')
-        let perdas = prompt ('Quantas vezes seu time perdeu?')
-
-        let pontuacao = parseInt(vitorias * 3) + parseInt(empates * 1)
-
-        mostra(`O ${nomeTime} obteve um total de ${pontuacao}pontos`)
-
-        if(pontuacao >80){
-            mostra('Parabens, seu time passou para a séria A do Brasileirão')
-        
-        } else if(pontuacao < 20){
-            mostra('infelizmente seu time foi rebaixado')
-        
-        } else {
-            mostra('Seu time continua na série B')
-        }
-
         function calcularIMC(peso, altura){
           return imc = peso/(altura*altura)
         }
 
-        let imcEdu = calcularIMC(86, 1.72)
-        mostra('O IMC de Edu calculado é ' + incEdu)
+        let nome = prompt ('qual é seu nome?')
+        let altura = prompt(`${nome}, qual sua altura? `)
+        let pesoInformado = prompt(`${nome}, qual seu peso?`)
 
+        let imcCalculado = calcularIMC(pesoInformado, alturaInformada)
+
+        mostra(`${nome}, seu IMC é de ${imcCalculado}`)
+
+        if(imcCalculado > 25) {
+            mostra(`${nome}, o seu IMC está acima do ideal`)
+        } else if(imcCalculado <18){
+            mostra(`${nome}, o seu IMC está abaixo do ideal`)
+        } else {
+            mostra(`${nome}, o seu IMC está ideal`)
+        }
 
     </script>
     
