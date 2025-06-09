@@ -36,29 +36,7 @@ create table clientes (id_clientes bigint auto_increment primary key not null,
   reposicao date not null,
   tamanho_casca enum('pequena', 'grande', 'media',
   freezer ENUM('cheio', 'vazio'));
-  INSERT INTO produtos (tamanho_casca, tamanho_pote, sabor_pote, tamanho_milk_shake, sabor_milk_shake, sabor_gelinho) VALUES
-('Pequena', 'Pequeno', 'Chocolate', 'Pequeno', 'Baunilha', 'Morango'),
-('Media', 'Medio', 'Baunilha', 'Medio', 'Chocolate', 'Limao'),
-('Grande', 'Grande', 'Morango', 'Grande', 'Morango', 'Laranja'),
-('Pequena', 'Medio', 'Laranja', 'Pequeno', 'Baunilha', 'Uva'),
-('Media', 'Grande', 'Limao', 'Medio', 'Laranja', 'Abacaxi'),
-('Grande', 'Pequeno', 'Uva', 'Grande', 'Baunilha', 'Coco'),
-('Pequena', 'Grande', 'Coco', 'Pequeno', 'Morango', 'Maracuja'),
-('Media', 'Pequeno', 'Maracuja', 'Medio', 'Limao', 'Goiaba'),
-('Grande', 'Medio', 'Goiaba', 'Grande', 'Uva', 'Caju'),
-('Pequena', 'Pequeno', 'Caju', 'Pequeno', 'Coco', 'Pitanga'),
-('Media', 'Grande', 'Pitanga', 'Media', 'Maracuja', 'Acai'),
-('Grande', 'Grande', 'Acai', 'Grande', 'Goiaba', 'Graviola'),
-('Pequena', 'Medio', 'Graviola', 'Pequeno', 'Caju', 'Cupuacu'),
-('Media', 'Pequeno', 'Cupuacu', 'Medio', 'Pitanga', 'Bacaba'),
-('Grande', 'Medio', 'Bacaba', 'Grande', 'Acai', 'Jabuticaba'),
-('Pequena', 'Grande', 'Jabuticaba', 'Pequeno', 'Goiaba', 'Cacau'),
-('Media', 'Grande', 'Cacau', 'Medio', 'Coco', 'Marula'),
-('Grande', 'Pequeno', 'Marula', 'Grande', 'Limao', 'Tamarindo'),
-('Pequena', 'Pequeno', 'Tamarindo', 'Pequeno', 'Baunilha', 'Gengibre'),
-('Media', 'Medio', 'Gengibre', 'Medio', 'Cacau', 'Canela');
    
-    
     create table sorveteria (id_sorveteria bigint auto_increment primary key,
     area_da_loja int not null,
     nome_funcionarios int not null,
@@ -72,6 +50,7 @@ create table clientes (id_clientes bigint auto_increment primary key not null,
     data_fim date not null,
     desconto decimal(5, 2) not null,
     produto_relacionado int);
+
     INSERT INTO promocoes (descricao, data_inicio, data_fim, desconto, produto_relacionado) VALUES
     ('Promocao "Verao Gelado": Desconto de 30% em todos os sorvetes de fruta', '2025-12-01', '2026-01-31', 30.00, 'Sorvetes de morango, manga, abacaxi e maracuja'),
 ('Compre 2, leve 3: Na compra de dois potes de sorvete, ganhe o terceiro de graça', '2025-06-10', '2025-06-20', 100.00, 'Potes de 1L de sorvete de creme e chocolate'),
