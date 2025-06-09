@@ -26,8 +26,9 @@ create table clientes (id_clientes bigint auto_increment primary key not null,
 ('Quésia Oliveira', 'quesia.oliveira@gmail.com', '81987654337'),
 ('Rafael Lima', 'rafael.lima@gmail.com', '91987654338'),
 ('Sofia Almeida', 'sofia.almeida@gmail.com', '11987654339'),
-('Tiago Costa', 'tiago.costa@gmail.com', '21987654340');
-  
+('Tiago Costa', 'tiago.costa@gmail.com', '21987654340'),
+('Eduardo Silva', 'eduardo.silva@gmail.com', '28428382732'); 
+
   create table produtos (id_produtos bigint auto_increment primary key,
   nome_produto varchar(50) not null,
   numero_produto varchar(50) not null,
